@@ -37,8 +37,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem "cucumber-rails", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
-gem "omniauth", "~> 0.2.0"
-gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
+gem "cucumber-rails", '>= 1.1.1', :group => [:test]
+gem "capybara", '>= 1.1.2', :group => [:development, :test]
+gem "omniauth", "~> 1.1.0"
+gem "omniauth-twitter", "~> 0.0.11"
+gem "multi_json", "~> 1.3.6"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]

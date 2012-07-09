@@ -1,4 +1,6 @@
 Cleansheet::Application.routes.draw do
+  resources :documents
+
   match '/auth/:provider/callback', :to => 'sessions#callback'
 
   # The priority is based upon order of creation:

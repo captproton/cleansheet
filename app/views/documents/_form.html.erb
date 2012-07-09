@@ -1,0 +1,34 @@
+<%= form_for(@document) do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% @document.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email_body %><br />
+    <%= f.text_area :email_body %>
+  </div>
+  <div class="field">
+    <%= f.label :email_from %><br />
+    <%= f.text_field :email_from %>
+  </div>
+  <div class="field">
+    <%= f.label :email_sent_at %><br />
+    <%= f.date_select :email_sent_at %>
+  </div>
+  <div class="field">
+    <%= f.label :csv %><br />
+	<%= f.file_field :csv %>
+    <%# f.text_area :csv %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
