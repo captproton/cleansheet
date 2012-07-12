@@ -1,5 +1,6 @@
 Cleansheet::Application.routes.draw do
   resources :import_tables
+  post 'import_tables/:id' => 'import_tables#merge'
 
   get "csv/import"
 
