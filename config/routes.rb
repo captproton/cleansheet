@@ -1,5 +1,15 @@
 Cleansheet::Application.routes.draw do
+  resources :import_tables
+  post 'import_tables/:id' => 'import_tables#merge'
+
+  get "csv/import"
+
+  resources :places
+
+  resources :people
+
   resources :documents
+  post "csv/import" => 'csv#upload'
 
   match '/auth/:provider/callback', :to => 'sessions#callback'
 
