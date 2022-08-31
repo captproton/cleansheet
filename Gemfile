@@ -43,7 +43,7 @@ gem "paperclip", "~> 3.1.2"
 
 gem "cucumber-rails", '>= 1.1.1', :group => [:test]
 gem "capybara", '>= 1.1.2', :group => [:development, :test]
-gem "omniauth", "~> 1.1.0"
+gem "omniauth", "~> 1.4.2"
 gem "omniauth-twitter", "~> 0.0.11"
 gem "multi_json", "~> 1.3.6"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
